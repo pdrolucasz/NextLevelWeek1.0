@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.success {
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.success span {
+    color: green;
+    font-size: 3em;
+}
+
+.success h2 {
+    color: white;
+}
