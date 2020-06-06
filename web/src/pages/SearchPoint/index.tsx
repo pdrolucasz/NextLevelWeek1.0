@@ -1,9 +1,7 @@
 import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { FiArrowLeft} from 'react-icons/fi'
-//import { Map, TileLayer,Marker } from 'react-leaflet'
 import axios from 'axios'
-//import { LeafletMouseEvent } from 'leaflet'
 
 import api from '../../services/api'
 
@@ -33,9 +31,7 @@ interface Points {
     whatsapp: string
     name: string
     image: string
-    items: {
-        title: string
-    }
+    image_url: string
 }
 
 const SearchPoint = () => {
@@ -51,8 +47,6 @@ const SearchPoint = () => {
     const [ selectedCity, setSelectedCity ] = useState('0')
 
     const [ selectedItems, setSelectedItems ] = useState<number[]>([])
-
-    const [ submitItems, setSubmitItems ] = useState<Item[]>([])
 
     const history = useHistory() 
 
@@ -84,6 +78,7 @@ const SearchPoint = () => {
             })
 
     }, [selectedUf])
+    
 
     function handleSelectUf(event: ChangeEvent<HTMLSelectElement>) {
         const uf = event.target.value
@@ -112,19 +107,9 @@ const SearchPoint = () => {
         
     }
 
-    async function handleSubmitItem() {
-        const items = await api.get('items', {
-            params: {
-                items: selectedItems
-            }
-        })
-
-        setSubmitItems(items.data)
-    }
-
     async function handleSubmit(event: FormEvent) {
         event.preventDefault()
-        if(selectedUf === '0' || selectedCity === '0') {
+        if(selectedUf === '0' || selectedCity === '0' || selectedItems.length === 0) {
             return
         }
 
@@ -137,7 +122,6 @@ const SearchPoint = () => {
         })
 
         setPointsData(points.data)
-        handleSubmitItem()
         setSearchComplete(true)
     }
 
@@ -154,33 +138,33 @@ const SearchPoint = () => {
             </header>
 
             {searchComplete ? 
-            <ul className="SearchComplete">
-                    {pointsData.map(point => (
-                        <li key={point.id} className="listSearch">
-                                <img src={point.image} />
-                            <div>
-                                <h2>{point.name}</h2>
-                                <p>{point.city} - {point.uf}</p>
-                                <p>E-mail: {point.email}</p>
-                                <p>Whatsapp: {point.whatsapp}</p>
-                                <div className="itens">
-                                    <h3>ItensColetados:</h3>
-                                    {submitItems.map(item => (
-                                        selectedItems.map(select => {
-                                            if(select == item.id) {
-                                                return <p key={item.id}>{item.title}</p>
-                                            }
-                                        })
-                                    ))}
-                                </div>
-                            </div>
-                        </li>
-                    ))} 
-                    <button className="btn" onClick={() => history.push('/')}>
-                        Voltar para Home
-                    </button>
-            </ul>
-            
+
+                    <ul className="SearchComplete">
+                        
+                        {pointsData.map(point => (
+                            <Link 
+                                className="link" 
+                                to={{
+                                    pathname: `point-detail/${point.id}`
+                                }}
+                            >
+                                <li key={point.id} className="listSearch">
+                                    <img src={point.image_url} />
+                                    <div>
+                                        <h2>{point.name}</h2>
+                                        <p>{point.city} - {point.uf}</p>
+                                        <p>E-mail: {point.email}</p>
+                                        <p>Whatsapp: {point.whatsapp}</p>                              
+                                    </div>
+                                </li>
+                            </Link> 
+                    ))}
+                             
+                        <button className="btn" onClick={() => history.push('/')}>
+                            Voltar para Home
+                        </button>
+                    </ul>
+                
             : 
 
             <form onSubmit={handleSubmit}>
