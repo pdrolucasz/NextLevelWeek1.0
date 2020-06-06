@@ -32,6 +32,7 @@ interface Points {
     name: string
     image: string
     image_url: string
+    title: string
 }
 
 const SearchPoint = () => {
@@ -143,12 +144,13 @@ const SearchPoint = () => {
                         
                         {pointsData.map(point => (
                             <Link 
+                                key={point.id}
                                 className="link" 
                                 to={{
                                     pathname: `point-detail/${point.id}`
                                 }}
                             >
-                                <li key={point.id} className="listSearch">
+                                <li className="listSearch">
                                     <img src={point.image_url} />
                                     <div>
                                         <h2>{point.name}</h2>
@@ -168,7 +170,7 @@ const SearchPoint = () => {
             : 
 
             <form onSubmit={handleSubmit}>
-                <h1>Pesquisar ponto de coleta</h1>
+                <h1>Pesquisar pontos de coleta</h1>
 
                 <fieldset>
                 
