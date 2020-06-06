@@ -25,7 +25,7 @@
 
 <h3>Além do desafio</h3>
 <p>💻 Adicionei uma tela de sucesso ao terminar o cadastro.</p>
-<p>💻 Adicionei uma página para pesquisar pontos de coletas.</p>
+<p>💻 Adicionei uma página para pesquisar pontos de coletas, caso não tenha pontos cadastrados é retornada uma resposta.</p>
 
 <div>
     <img src="github/Cadastro.gif" width="600"><img src="github/Pesquisa.gif" width="600">    
