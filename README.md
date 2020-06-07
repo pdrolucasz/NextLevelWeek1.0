@@ -38,7 +38,7 @@
     <img src="github/Home-Mobile.jpg" width="400">
 </div>
 
-<p>📱 Adicionei um select para escolher UF e cidade, usei <strong>react-native-picker-select</strong> para fazer isso.</p>
+<h3>📱 Adicionei um select para escolher UF e cidade, usei <strong>react-native-picker-select</strong> para fazer isso.</h3>
 
 <div>
     <img src="github/Mobile.gif" width="400">  
