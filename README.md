@@ -45,6 +45,42 @@
     <li>✔️ Axios</li>
 </ul>
 
+# Instalar dependências
+<ul>
+    <li>É necessário ter o <a href="https://nodejs.org/en/">NodeJS</a> instalado.</li>
+    <li>Também é necessário ter o <a href="https://www.npmjs.com/">NPM</a> ou 
+        <a href="https://yarnpkg.com/">Yarn</a>.
+    </li>
+    <li>É preciso ter o <a href="https://expo.io/">Expo</a> instalado de forma global.</li>
+</ul>
+
+## API
+<hr>
+
+<pre>
+    yarn install
+    <span>#Iniciar banco de dados</span>
+    yarn knex:migrate
+    yarn knex:seed
+    yarn dev
+</pre>
+
+## Front-End
+<hr>
+
+<pre>
+    yarn install
+    yarn start
+</pre>
+
+## Mobile
+<hr>
+
+<pre>
+    yarn install
+    yarn start
+</pre>
+
 ## 🎓 Quem ministrou?
 <p>As aulas foram ministradas pelo <a href="https://github.com/diego3g">Diego Fernandes</a> nas aulas Next Level Week.</p>
 
