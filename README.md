@@ -29,7 +29,7 @@
 <p>💻 Ao clicar no ponto de coleta, o usuário é levado a uma página com as informações do ponto de coleta.</p>
 
 <div>
-    <img src="github/Cadastro.gif" width="600"><img src="github/Pesquisa.gif" width="600">    
+    <img src="github/Cadastrar.gif" width="600"><img src="github/Pesquisar.gif" width="600">    
 </div>
 
 # 🚀 Tecnologias
