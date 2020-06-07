@@ -6,8 +6,6 @@
 
 <h1 align="center">Ecoleta</h1>
 
-<h3 align="center">🚧 NextLevelWeek 1.0 🚀 In progress.. 🚧</h3>
-
 <h3>♻️ Sobre</h3>
 <p>O Ecoleta é um marketplace de coleta de resíduos. Com ele, é possível ajudar as pessoas a encontrarem pontos de coleta de resíduos de forma eficiente.</p>
 
@@ -15,7 +13,7 @@
 <img src="github/1920x1080.jpg" width="500">
 <p>A aplicação foi construída na trilha booster da Next Level Week distribuída pela <a href="https://rocketseat.com.br/">Rocketseat</a></p>
 
-# Front-End:
+# 🌐 Front-End:
 
 <h3>📷 Screenshot:</h3>
 
@@ -30,6 +28,20 @@
 
 <div>
     <img src="github/Cadastrar.gif" width="600"><img src="github/Pesquisar.gif" width="600">    
+</div>
+
+# 📱 Mobile:
+
+<h3>📷 Screenshot:</h3>
+
+<div>
+    <img src="github/Home-Mobile.jpg" width="400">
+</div>
+
+<p>📱 Adicionei um select para escolher UF e cidade, usei <strong>react-native-picker-select</strong> para fazer isso.</p>
+
+<div>
+    <img src="github/Mobile.gif" width="400">  
 </div>
 
 # 🚀 Tecnologias
