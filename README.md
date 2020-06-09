@@ -15,7 +15,7 @@
 
 # 🌐 Front-End:
 
-<h3>📷 Screenshot: teste</h3>
+<h3>📷 Screenshot:</h3>
 
 <div>
     <img src="github/Home.png" width="600">
